@@ -1,0 +1,258 @@
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-stone-100: hsl(30, 54%, 90%);
+  --clr-stone-150: hsl(30, 18%, 87%);
+  --clr-stone-600: hsl(30, 10%, 34%);
+  --clr-stone-900: hsl(24, 5%, 18%);
+  --clr-brown-800: hsl(14, 45%, 36%);
+  --clr-rose-800: hsl(332, 51%, 32%);
+  --clr-rose-50: hsl(330, 100%, 98%);
+
+  --title-font: 'Young Serif', serif;
+  --body-font: 'Outfit', sans-serif;
+  --base-fs: 16px;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-stone-100);
+  font-family: var(--body-font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 128px 0;
+  /* height: 100vh; */
+}
+
+.recipe-page {
+  width: 736px;
+  background-color: var(--clr-white);
+  border-radius: 24px;
+  /* padding: 40px; */
+}
+
+.recipe-page img {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.img-container {
+    padding: 40px 40px 0;
+}
+
+main {
+    padding: 0 40px 40px;
+}
+
+h1,
+h2 {
+  font-family: var(--title-font);
+}
+
+.intro {
+  margin-bottom: 32px;
+}
+
+.intro h1 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 24px;
+}
+
+.intro p {
+  font-size: var(--base-fs);
+  line-height: 150%;
+  color: var(--clr-stone-600);
+}
+
+.prepare-time {
+  padding: 24px;
+  background-color: var(--clr-rose-50);
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.prepare-time h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--clr-rose-800);
+  line-height: 100%;
+  margin-bottom: var(--base-fs);
+}
+
+.prepare-time ul .ingredients ul {
+  list-style: inside;
+}
+
+.prepare-time li,
+.ingredients li {
+  padding-left: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.prepare-time li:not(li:last-child),
+.ingredients li:not(li:last-child),
+.instructions li:not(li:last-child) {
+  margin-bottom: 8px;
+}
+
+.prepare-time li .marker,
+.ingredients li .marker {
+  width: 4px;
+  height: 4px;
+  background-color: var(--clr-rose-800);
+  border-radius: 100%;
+  margin-right: 32px;
+}
+
+.prepare-time .content,
+.ingredients .content {
+  color: var(--clr-stone-600);
+}
+
+.prepare-time .content span,
+.instructions .content span {
+  font-weight: 600;
+}
+
+.ingredients h2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--clr-brown-800);
+  margin-bottom: 24px;
+}
+
+.fill-line {
+  width: 100%;
+  background-color: var(--clr-stone-150);
+  border: none;
+  height: 1px;
+  display: block;
+  margin: 32px 0;
+}
+
+.instructions h2 {
+  color: var(--clr-brown-800);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 24px;
+}
+
+.instructions ol {
+  list-style: none;
+}
+
+.instructions li {
+  padding-left: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.instructions li .marker {
+  font-size: var(--base-fs);
+  font-weight: 700;
+  color: var(--clr-brown-800);
+  margin-right: var(--base-fs);
+}
+
+.instructions .content {
+  font-size: var(--base-fs);
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--clr-stone-600);
+}
+
+.nutrition h2 {
+  color: var(--clr-brown-800);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.nutrition p {
+  font-size: var(--base-fs);
+  line-height: 150%;
+  color: var(--clr-stone-600);
+  margin: 24px 0;
+}
+
+.nutrition table {
+  width: 100%;
+}
+
+.nutrition td {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--clr-stone-150);
+}
+
+.nutrition td:nth-child(odd) {
+  padding-left: 32px;
+}
+
+.nutrition td:nth-child(even) {
+  padding-left: 16px;
+  padding-right: 32px;
+}
+
+.nutrition tr:first-child td {
+  padding-top: 0;
+}
+
+.nutrition tr:last-child td {
+  padding-bottom: 0;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .recipe-page {
+    width: 616px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 !important;
+  }
+
+  .recipe-page {
+    border-radius: 0px;
+  }
+
+  .img-container {
+    padding: 0;
+  }
+
+  .img-container img {
+    border-radius: 0;
+    object-fit: scale-down;
+    height: auto;
+  }
+
+  .intro h1 {
+    font-size: 36px;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    .intro h1 {
+        font-size: 34px;
+    }
+}
+
+/* need to make font size with rem unit... later */
